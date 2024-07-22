@@ -1,5 +1,72 @@
-template-repository (1.0-1) unstable; urgency=medium
+golang-github-alecthomas-assert (2.7.0-1) unstable; urgency=medium
 
-  * Initial release
+  * New upstream version 2.7.0
+  * Bump Standards-Version to 4.7.0 (no change)
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Anthony Fok <foka@debian.org>  Sun, 14 Jul 2024 06:04:00 -0600
+
+golang-github-alecthomas-assert (2.6.0-1) unstable; urgency=medium
+
+  * New upstream version 2.6.0
+  * Bump versioned dependency as per go.mod
+
+ -- Anthony Fok <foka@debian.org>  Sun, 24 Mar 2024 20:32:42 -0600
+
+golang-github-alecthomas-assert (2.2.1-1) unstable; urgency=medium
+
+  * New upstream version 2.2.1
+  * Bump dependency: golang-github-alecthomas-repr-dev (>= 0.2.0)
+
+ -- Anthony Fok <foka@debian.org>  Wed, 08 Mar 2023 10:25:22 -0700
+
+golang-github-alecthomas-assert (2.2.0-2) unstable; urgency=medium
+
+  * Build-Depends on golang-github-hexops-gotextdiff-dev (>= 1.0.3)
+    now that it has entered Debian.  Hurray!  Revert "Temporarily
+    vendor a copy of github.com/hexops/gotextdiff v1.0.3"
+
+ -- Anthony Fok <foka@debian.org>  Wed, 01 Feb 2023 12:41:03 -0700
+
+golang-github-alecthomas-assert (2.2.0-1) unstable; urgency=medium
+
+  [ Alexandre Viau ]
+  * Point Vcs-* urls to salsa.debian.org.
+
+  [ Debian Janitor (Jelmer Vernooĳ) ]
+  * Bump debhelper from old 10 to 12.
+    Fixes: lintian: package-uses-old-debhelper-compat-version
+  * Set debhelper-compat version in Build-Depends.
+    Fixes: lintian: uses-debhelper-compat-file
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.  Fixes: lintian: upstream-metadata-file-is-missing
+
+  [ Anthony Fok ]
+  * Add debian/watch
+  * New upstream version 2.2.0
+  * Reorder fields in debian/control and debian/copyright
+  * Change Section from devel to golang
+  * Update Maintainer email address to team+pkg-go@tracker.debian.org
+  * Bump debhelper build-dependency to debhelper-compat (= 13)"
+  * Use dh-sequence-golang instead of dh-golang and --with=golang
+  * Invoke dh with --builddirectory=_build
+  * Refresh list of Go library dependencies as per go.mod
+  * Add "Rules-Requires-Root: no" to debian/control
+  * Bump Standards-Version to 4.6.2 (no change)
+  * Update XS-Go-Import-Path to github.com/alecthomas/assert/v2
+  * Mark library package with "Multi-Arch: foreign"
+  * Update package description according to README.md
+  * Remove unused Files-Excluded field from debian/copyright
+  * Update copyright information for assert/v2 which, unlike v1 and older,
+    is a new clean-room implementation using Go 1.18 generics.
+  * Add Upstream-Contact: https://github.com/alecthomas/assert/issues/new
+  * debian/gbp.conf: Set debian-branch to debian/sid for DEP-14 conformance
+  * Temporarily vendor a copy of github.com/hexops/gotextdiff v1.0.3
+    until golang-github-hexops-gotextdiff enters Debian
+
+ -- Anthony Fok <foka@debian.org>  Wed, 25 Jan 2023 11:35:45 -0700
+
+golang-github-alecthomas-assert (0.0~git20170929.405dbfe-1) unstable; urgency=medium
+
+  * Initial release (Closes: #879747)
+
+ -- Anthony Fok <foka@debian.org>  Wed, 25 Oct 2017 05:11:20 -0600
